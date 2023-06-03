@@ -1,14 +1,14 @@
 {
-    "name": "shieldon/shieldon",
+    "name": "optipic-io/monitorio-protector",
     "description": "Web application firewall for PHP.",
     "keywords": ["firewall", "web-application-firewall", "anti-scraping", "xss-filter", "xss-protection", "web-security", "www-authenticate"],
-    "homepage": "https://github.com/terrylinooo/shieldon",
+    "homepage": "https://github.com/optipic-io/monitorio-protector",
     "license": "MIT",
     "authors": [
         {
-            "name": "Terry Lin",
-            "email": "contact@terryl.in",
-            "homepage": "https://terryl.in",
+            "name": "Monitorio",
+            "email": "info@monitorio.io",
+            "homepage": "https://monitorio.io",
             "role": "Developer"
         }
     ],
