@@ -64,6 +64,10 @@ $timezone = '';
                     <input name="order" type="text" value="1" id="order" placeholder="1" style="width: 50px">
                 </div>
                 <div class="d-inline-block align-top">
+                    <label for="comment"><?php _e('panel', 'ipma_label_comment', 'Comment'); ?></label><br />
+                    <input name="comment" type="text" value="" id="comment" placeholder="" style="width: 200px">
+                </div>
+                <div class="d-inline-block align-top">
                     <label class="visible">&nbsp;</label><br />
                     <input type="submit" name="submit" id="btn-add-rule" class="button button-primary" value="<?php _e('panel', 'auth_btn_submit', 'Submit'); ?>">
                 </div>
@@ -102,6 +106,7 @@ $timezone = '';
                     <th><?php _e('panel', 'auth_label_url_path', 'URL Path'); ?></th>
                     <th><?php _e('panel', 'ipma_label_ip', 'IP'); ?></th>
                     <th><?php _e('panel', 'ipma_label_rule', 'Rule'); ?></th>
+                    <th><?php _e('panel', 'ipma_label_comment', 'Comment'); ?></th>
                     <th><?php _e('panel', 'auth_label_remove', 'Remove'); ?></th>
                 </tr>
             </thead>
@@ -120,6 +125,7 @@ $timezone = '';
                         <?php echo $ipInfo['ip']; ?>
                     </td>
                     <td><?php echo $ipInfo['rule']; ?></td>
+                    <td><?php echo $ipInfo['comment']; ?></td>
                     <td><button type="button" class="button btn-remove-ip" data-ip="<?php echo $ipInfo['ip']; ?>" data-order="<?php echo ($i + 1); ?>"><i class="far fa-trash-alt"></i></button></td>
                 </tr>
                 <?php endforeach; ?>

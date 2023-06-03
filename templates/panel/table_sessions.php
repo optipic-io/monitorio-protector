@@ -87,6 +87,7 @@ $timezone = '';
                     <th><?php _e('panel', 'table_label_status', 'Status'); ?></th>
                     <th><?php _e('panel', 'table_label_session_id', 'Session ID'); ?></th>
                     <th><?php _e('panel', 'overview_label_ip', 'IP'); ?></th>
+                    <th><?php _e('panel', 'overview_label_username', 'Username'); ?></th>
                     <th><?php _e('panel', 'table_label_time', 'Time'); ?></th>
                     <th><?php _e('panel', 'table_label_remain_seconds', 'Remain seconds'); ?></th>
                 </tr>
@@ -96,7 +97,8 @@ $timezone = '';
                 <?php $i = 1; ?>
                 <?php foreach ($session_list as $key => $sessionInfo) : ?>
                     <?php
-
+                        $sessionData = json_decode($sessionInfo['data'], true);
+                        
                         $remainsTime = $expires - (time() - $sessionInfo['time']);
 
                         if ($remainsTime < 1 ) {
@@ -124,6 +126,7 @@ $timezone = '';
                             <?php endif; ?>
                             <?php echo $sessionInfo['ip']; ?>
                         </td>
+                        <td><?php echo $sessionData['site_username']; ?></td>
                         <td><?php echo date('Y-m-d H:i:s', $sessionInfo['time']); ?></td>
                         <th><?php echo $remainsTime; ?></th>
                     </tr>

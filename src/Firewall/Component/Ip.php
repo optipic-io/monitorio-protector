@@ -27,6 +27,7 @@ use Shieldon\Firewall\Component\AllowedTrait;
 use Shieldon\Firewall\Component\DeniedTrait;
 use Shieldon\Firewall\IpTrait;
 
+use function Shieldon\Firewall\get_session_instance;
 use function array_keys;
 use function base_convert;
 use function count;
@@ -355,7 +356,17 @@ class Ip extends ComponentProvider
      */
     public function isDenied(): bool
     {
+        // Monitorio fix: Deny by site username
+        $siteUsername = get_session_instance()->get('site_username');
+        
         foreach ($this->deniedList as $deniedIp) {
+            // Monitorio fix: Deny by site username
+            if(!empty($siteUsername) && self::ipIsSiteUsename($deniedIp)) {
+                if($siteUsername==substr($deniedIp, 2)) {
+                    return true;
+                }
+            }
+            
             if (strpos($deniedIp, '/') !== false) {
                 if ($this->inRange($this->ip, $deniedIp)) {
                     return true;
@@ -377,7 +388,17 @@ class Ip extends ComponentProvider
      */
     public function isAllowed(): bool
     {
+        
+        // Monitorio fix: Allow by site username
+        $siteUsername = get_session_instance()->get('site_username');
+        
         foreach ($this->allowedList as $allowedIp) {
+            // Monitorio fix: Allow by site username
+            if(!empty($siteUsername) && self::ipIsSiteUsename($allowedIp)) {
+                if($siteUsername==substr($allowedIp, 2)) {
+                    return true;
+                }
+            }
             if (strpos($allowedIp, '/') !== false) {
                 if ($this->inRange($this->ip, $allowedIp)) {
                     return true;
@@ -410,5 +431,29 @@ class Ip extends ComponentProvider
     public function getDenyStatusCode(): int
     {
         return self::STATUS_CODE;
+    }
+    
+    
+    
+    /**
+     * Check if ip address is site username
+     * Monitorio fix
+     * 
+     * @return bool
+     */
+    public static function ipIsSiteUsename($ip) {
+        
+        if(substr($ip, 0, 2)=='u:') {
+            return true;
+        }
+        
+        return false;
+        
+        /*$cntDotsInIp = substr_count($ip, ".");
+        if($cntDotsInIp>=3) {
+            return false;
+        }
+        
+        return true;*/
     }
 }

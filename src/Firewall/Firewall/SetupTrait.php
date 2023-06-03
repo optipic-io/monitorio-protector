@@ -313,10 +313,8 @@ trait SetupTrait
         $deniedList = [];
 
         foreach ($ipList as $ip) {
-            if (empty($ip))
-                continue;
 
-            if (0 === strpos($this->kernel->getCurrentUrl(), empty($ip['url']) ? '/' : $ip['url']) ) {
+            if (0 === strpos($this->kernel->getCurrentUrl(), $ip['url']) ) {
 
                 if ('allow' === $ip['rule']) {
                     $allowedList[] = $ip['ip'];
@@ -353,6 +351,15 @@ trait SetupTrait
          */
         $key = array_search(true, $ipSourceType);
         $ip = $serverParams[$key];
+        
+        // Monitorio fix:
+        // for cases like "xxx.xxx.xxx.xxx, xxx.xxx.xxx.xxx" (nginx proxy, etc)
+        if(stripos($ip, ',')!==false) {
+            $ipReal = explode(',', $ip);
+            if(is_array($ipReal) && !empty($ipReal)) {
+                $ip = trim($ipReal[0]);
+            }
+        }
 
         if (empty($ip)) {
 
@@ -523,14 +530,15 @@ trait SetupTrait
      */
     protected function setupDialogUserInterface()
     {
-        Event::AddListener('session_init', function() {
+        // Monitorio fix: Event::AddListener('session_init') никогда не срабатывает -- поэтому просто вызызаем код который должен выполняться по этому событию. Не работает скорее всего из-з того что session_init вызывается внутри другого события (set_session_driver). Видимо вложенность событий не срабатывает.
+        //Event::AddListener('session_init', function() {
             $ui = $this->getOption('dialog_ui');
 
             if (!empty($ui)) {
                 get_session_instance()->set('shieldon_ui_lang', $ui['lang']);
                 $this->kernel->setDialog($this->getOption('dialog_ui'));
             }
-        });
+        //});
 
         $dialogInfo = $this->getOption('dialog_info_disclosure');
 

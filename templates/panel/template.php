@@ -62,6 +62,7 @@ use function Shieldon\Firewall\_e;
                             <?php _e('panel', 'nav_locale', 'Locale'); ?>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" data-lang="ru" class="dropdown-item" onclick="selectLanguage(this, event);" role="button">Русский</a>
                             <a href="#" data-lang="en" class="dropdown-item" onclick="selectLanguage(this, event);" role="button">English</a>
                             <a href="#" data-lang="zh" class="dropdown-item" onclick="selectLanguage(this, event);" role="button">中文</a>
                             <a href="#" data-lang="zh_CN" class="dropdown-item" onclick="selectLanguage(this, event);" role="button">简体中文</a>

@@ -52,6 +52,12 @@ use function Shieldon\Firewall\_e;
                             中文 (简体) (zh_CN)
                         </label> 
                     </div>
+                    <div class="radio-style">
+                        <input name="dialog_ui__lang" value="ru" type="radio" id="lang-4" <?php $this->checked('dialog_ui.lang', 'ru'); ?> /> 
+                        <label for="lang-4" class="radio-label">
+                            Русский (ru)
+                        </label> 
+                    </div>
                 </div>
             </td>
         </tr>

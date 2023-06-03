@@ -116,13 +116,17 @@ class Setting extends BaseController
 
         if (
             isset($postParams['ip']) &&
-            filter_var(explode('/', $postParams['ip'])[0], FILTER_VALIDATE_IP)
+            (
+                filter_var(explode('/', $postParams['ip'])[0], FILTER_VALIDATE_IP)
+                || \Shieldon\Firewall\Component\Ip::ipIsSiteUsename($postParams['ip']) 
+            )
         ) {
 
             $url = $postParams['url'];
             $ip = $postParams['ip'];
             $rule = $postParams['action'];
             $order = (int) $postParams['order'];
+            $comment = $postParams['comment'];
 
             if ($order > 0) {
                 $order--;
@@ -136,6 +140,7 @@ class Setting extends BaseController
                 $newIpList[$order]['url'] = $url;
                 $newIpList[$order]['ip'] = $ip;
                 $newIpList[$order]['rule'] = $rule;
+                $newIpList[$order]['comment'] = $comment;
 
                 array_splice($ipList, $order, 0, $newIpList);
 
