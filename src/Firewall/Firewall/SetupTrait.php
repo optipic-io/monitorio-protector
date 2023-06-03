@@ -531,14 +531,14 @@ trait SetupTrait
     protected function setupDialogUserInterface()
     {
         // Monitorio fix: Event::AddListener('session_init') никогда не срабатывает -- поэтому просто вызызаем код который должен выполняться по этому событию. Не работает скорее всего из-з того что session_init вызывается внутри другого события (set_session_driver). Видимо вложенность событий не срабатывает.
-        //Event::AddListener('session_init', function() {
+        Event::AddListener('session_init', function() {
             $ui = $this->getOption('dialog_ui');
 
             if (!empty($ui)) {
                 get_session_instance()->set('shieldon_ui_lang', $ui['lang']);
                 $this->kernel->setDialog($this->getOption('dialog_ui'));
             }
-        //});
+        });
 
         $dialogInfo = $this->getOption('dialog_info_disclosure');
 

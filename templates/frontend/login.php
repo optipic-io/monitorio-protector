@@ -124,7 +124,8 @@ $imgsrc = 'https://shieldon-io.github.io/static/icons/icon-warning_96x96.png';
             <div class="card">
                 <div class="card-header">
                     <div class="logo-wrapper">
-                        <img src="https://shieldon-io.github.io/static/images/logo.png" class="logo">
+                        <img src="https://monitorio.io/img-icons/monitorio-logo-transparent.png" class="logo">
+                        <span style="font-size: 17px; vertical-align: super;">Monitorio.Protector</span>
                     </div>
                 </div>
                 <div class="card-body">

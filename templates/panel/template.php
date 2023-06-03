@@ -39,6 +39,7 @@ use function Shieldon\Firewall\_e;
         <nav class="navbar navbar-expand-md navbar-dark shadow-md sticky-top">
             <a class="navbar-brand" href="#">
                 <img src="<?php echo $logo_url; ?>" class="logo-image">
+                Monitorio.Protector
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

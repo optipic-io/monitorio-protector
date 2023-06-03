@@ -318,8 +318,8 @@ trait TemplateTrait
         $ui = [
             'background_image' => '',
             'bg_color'         => '#ffffff',
-            'header_bg_color'  => '#212531',
-            'header_color'     => '#ffffff',
+            'header_bg_color'  => '#dbdbdb',
+            'header_color'     => '#212531',
             'shadow_opacity'   => '0.2',
         ];
 
