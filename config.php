@@ -36,8 +36,8 @@ return [
     */
 
     'admin' => [
-        'user' => 'shieldon_user',
-        'pass' => 'shieldon_pass',
+        'user' => 'monitorio',
+        'pass' => 'monitorio_pass',
         'last_modified' => '2020-02-05',
     ],
 
@@ -82,8 +82,8 @@ return [
         // Data driver: File system.
         'mysql' => [
             'host'    => '127.0.0.1',
-            'dbname'  => 'shieldon_db',
-            'user'    => 'shieldon_user',
+            'dbname'  => 'db_monitorio_protector',
+            'user'    => 'user_monitorio_protector',
             'pass'    => '1234',
             'charset' => 'utf8',
         ],
@@ -229,7 +229,7 @@ return [
                 'site_key' => null,
                 'secret_key' => null,
                 'version' => 'v2',
-                'lang' => 'en-US'
+                'lang' => 'ru-RU'
             ],
         ],
 
@@ -421,9 +421,24 @@ return [
 
     'www_authenticate' => [
         [
-            'url'  => '/wp-admin',
-            'user' => 'wp_shieldon_admin',
-            'pass' => '$2y$10$eA/S6rH3JDkYV9nrrUvuMOTh8Q/ts33DdCerbNAUpdwtSl3Xq9cQq',
+            'url'  => '/admin/',
+            'user' => 'monitorio',
+            'pass' => '$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1',
+        ],
+        [
+            'url'  => '/bitrix/admin/',
+            'user' => 'monitorio',
+            'pass' => '$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1',
+        ],
+        [
+            'url'  => '/wp-admin/',
+            'user' => 'monitorio',
+            'pass' => '$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1',
+        ],
+        [
+            'url'  => '/administrator/',
+            'user' => 'monitorio',
+            'pass' => '$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1',
         ],
     ],
 
