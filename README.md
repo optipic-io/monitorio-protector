@@ -3,7 +3,7 @@
 Monitorio:Protector is a Web Application Firewall (WAF) for PHP, with a beautiful and useful control panel that helps you easily manage the firewall rules and security settings.
 
 ```
-composer.phar require optipic-io/monitorio-protector:dev-main
+composer require optipic-io/monitorio-protector:dev-main
 ```
 
 ## License
