@@ -184,6 +184,28 @@ trait FirewallTrait
         $v = explode('.', $field);
         $c = count($v);
 
+        // Monitorio:
+        // Make 'ip_manager' rules unique
+        // --------------------------------------
+        if ($field=='ip_manager') {
+            $rulesHash = [];
+            foreach ($value as $ipInd=>$rule) {
+                $hash = md5(json_encode([
+                    $rule['url'],
+                    $rule['ip'],
+                    $rule['rule'],
+                ]));
+
+                if (in_array($hash, $rulesHash)) {
+                    unset($value[$ipInd]);
+                }
+                else {
+                    $rulesHash[] = $hash;
+                }
+            }
+        }
+        // --------------------------------------
+
         switch ($c) {
             case 1:
                 $this->configuration[$v[0]] = $value;

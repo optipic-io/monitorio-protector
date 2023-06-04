@@ -214,8 +214,56 @@ class Firewall
             $this->kernel->managedBy('config');
         }
 
+        // Monitorio: Добавляем логику пост-обработки конфига
+        $this->configureAfter();
+
         $this->setup();
     }
+
+
+
+
+    /**
+     * Monitorio
+     * Exec logic after init config
+     * 
+     * @return void
+     */
+    public function configureAfter(): void
+    {
+        
+        $configMonitorioPath = __DIR__ . '/../../config_monitorio.php';
+        if (!file_exists($configMonitorioPath)) {
+            return;
+        }
+        
+        $configMonitorio = include $configMonitorioPath;
+
+        if (!empty($configMonitorio['ip_manager']) && is_array($configMonitorio['ip_manager'])) {
+            $ipManagerMerged = array_merge($this->configuration['ip_manager'], $configMonitorio['ip_manager']);
+
+            $rulesHash = [];
+            foreach ($ipManagerMerged as $ipInd=>$rule) {
+                $hash = md5(json_encode([
+                    $rule['url'],
+                    $rule['ip'],
+                    $rule['rule'],
+                ]));
+
+                if (in_array($hash, $rulesHash)) {
+                    unset($ipManagerMerged[$ipInd]);
+                }
+                else {
+                    $rulesHash[] = $hash;
+                }
+            }
+
+            $this->configuration['ip_manager'] = $ipManagerMerged;
+        }
+
+        //var_dump($this->configuration['ip_manager']);
+    }
+
 
     /**
      * Just, run!
