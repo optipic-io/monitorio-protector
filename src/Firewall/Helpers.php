@@ -189,7 +189,6 @@ function get_user_lang(): string
         $lang = 'en';
 
         // Monitorio fix
-        // Определяем язык интерфейсе по настройкам браузера
         // -----------------------------
         if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
             $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);

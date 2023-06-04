@@ -37,7 +37,7 @@ use function Shieldon\Firewall\_e;
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark shadow-md sticky-top">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="https://monitorio.io/" target="_blank" style="color: #666;">
                 <img src="<?php echo $logo_url; ?>" class="logo-image">
                 Monitorio.Protector
             </a>
@@ -263,9 +263,8 @@ use function Shieldon\Firewall\_e;
                                         <?php _e('panel', 'channel', 'Channel'); ?>: <?php echo $channel_name; ?>
                                         <?php _e('panel', 'mode', 'Mode'); ?>: <?php echo $mode_name; ?>
                                     -->
-                                    Powered by <a href="https://shieldon.io" target="_blank">Shieldon</a> <?php echo SHIELDON_FIREWALL_VERSION; ?>
-                                    &copy; 2019-<?php echo date('Y'); ?> <a href="https://terryl.in" target="_blank">Terry Lin</a>
-                                    <a href="https://github.com/terrylinooo/shieldon" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="https://monitorio.io" target="_blank">Monitorio.io</a>
+                                    &copy; <?php echo date('Y'); ?>
                                 </div>
                             </div>
                         </div>

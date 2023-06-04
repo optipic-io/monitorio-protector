@@ -67,17 +67,23 @@ $imgsrc = 'https://shieldon-io.github.io/static/icons/icon-warning_96x96.png';
             color: #fff;
             font-weight: bold;
             box-sizing: border-box;
-            box-shadow: inset 0px 1px 0px 0px #dcecfb;
-            background: linear-gradient(to bottom, #61b0ff 5%, #4c99e0 100%);
-            background-color: #61b0ff;
-            border: 1px solid #84bbf3;
+            /*box-shadow: inset 0px 1px 0px 0px #dcecfb;*/
+            /*background: linear-gradient(to bottom, #61b0ff 5%, #4c99e0 100%);*/
+            /*background-color: #61b0ff;*/
+            /*border: 1px solid #84bbf3;*/
             text-shadow: 0px 1px 0px #528ecc;
             cursor:pointer;
+
+            background: #00bb59;
+            background-color: #00bb59;
+            border: 1px solid #00bb59;
+            box-shadow: none;
         }
 
         .btn-submit:hover {
-            background:linear-gradient(to bottom, #4c99e0 5%, #61b0ff 100%);
-            background-color:#4c99e0;
+            /*background:linear-gradient(to bottom, #4c99e0 5%, #61b0ff 100%);*/
+            /*background-color:#4c99e0;*/
+            background: #00d164;
         }
 
         .btn-submit:active {
@@ -151,6 +157,9 @@ $imgsrc = 'https://shieldon-io.github.io/static/icons/icon-warning_96x96.png';
                             <?php endif; ?>
                             <div class="input-box">
                                 <button type="submit" class="btn-submit"><?php _e('panel', 'login_btn_login', 'Login'); ?></button>
+                            </div>
+                            <div>
+                                <a href="https://monitorio.io/"><small>Monitorio.io</small></a>
                             </div>
                         </div>
                         <?php echo $csrf; ?>

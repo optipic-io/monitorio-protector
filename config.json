@@ -30,7 +30,7 @@
     },
     "loggers": {
         "action": {
-            "enable": false,
+            "enable": true,
             "config": {
                 "directory_path": ""
             }
@@ -40,10 +40,10 @@
         "frequency": {
             "enable": true,
             "config": {
-                "quota_s": 2,
-                "quota_m": 10,
-                "quota_h": 30,
-                "quota_d": 60
+                "quota_s": 20,
+                "quota_m": 30,
+                "quota_h": 50,
+                "quota_d": 100
             }
         },
         "cookie": {
@@ -125,9 +125,9 @@
         }
     },
     "xss_protection": {
-        "post": false,
-        "get": false,
-        "cookie": false
+        "post": true,
+        "get": true,
+        "cookie": true
     },
     "xss_protected_list": [
         {
@@ -209,7 +209,7 @@
         "header_bg_color": "#212531",
         "header_color": "#ffffff",
         "shadow_opacity": "0.2",
-        "lang": "en"
+        "lang": "ru"
     },
     "dialog_info_disclosure": {
         "user_inforamtion": false,

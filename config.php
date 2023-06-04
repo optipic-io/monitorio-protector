@@ -106,7 +106,7 @@ return [
 
     'loggers' => [
         'action' => [
-            'enable' => false,
+            'enable' => true,
             'config' => [
                 'directory_path' => '',
             ],
@@ -129,10 +129,10 @@ return [
         'frequency' => [
             'enable' => false,
             'config' => [
-                'quota_s' => 2,
-                'quota_m' => 10,
-                'quota_h' => 30,
-                'quota_d' => 60,
+                'quota_s' => 20,
+                'quota_m' => 30,
+                'quota_h' => 50,
+                'quota_d' => 100,
             ],
         ],
 
@@ -289,9 +289,9 @@ return [
     */
 
     'xss_protection' => [
-        'post' => false,
-        'get' => false,
-        'cookie' => false,
+        'post' => true,
+        'get' => true,
+        'cookie' => true,
     ],
 
     'xss_protected_list' => [
@@ -449,7 +449,7 @@ return [
     */
 
     'dialog_ui' => [
-        'lang' => 'en',
+        'lang' => 'ru',
         'background_image' => '',
         'bg_color' => '#ffffff',
         'header_bg_color' => '#212531',
