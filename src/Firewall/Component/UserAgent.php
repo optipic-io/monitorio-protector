@@ -371,7 +371,7 @@ class UserAgent extends ComponentProvider
             'MTRobot',
             'Mag-Net',
             'Magnet',
-            'Mail.RU_Bot',
+            //'Mail.RU_Bot',
             'Majestic-SEO',
             'Majestic12',
             'Majestic SEO',
