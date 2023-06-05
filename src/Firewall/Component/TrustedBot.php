@@ -196,6 +196,31 @@ class TrustedBot extends ComponentProvider
                 'userAgent' => 'ask',
                 'rdns'      => '.ask.com',
             ],
+
+            // Search engine: Mail.ru
+            'mailru' => [
+                'userAgent' => 'mail.ru',
+                'rdns'      => '.mail.ru',
+            ],
+
+            // Search engine: Rambler
+            'rambler_1' => [
+                'userAgent' => 'ramblermail',
+                'rdns'      => '.rambler.ru',
+            ],
+
+            // Search engine: Rambler
+            'rambler_2' => [
+                'userAgent' => 'stackrambler',
+                'rdns'      => '.rambler.ru',
+            ],
+
+            // Search engine: Rambler
+            'baidu' => [
+                'userAgent' => 'baiduspider',
+                'rdns'      => '.baidu.com',
+            ],
+            
         ];
 
         $this->deniedList = [];

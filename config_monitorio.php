@@ -44,5 +44,81 @@ return [
             "ip" => "135.181.214.86",
             "comment" => "Monitorio",
         ],
+        // -----------------------------------------------------------------------------
+        // DuckDuck Searchengine
+        // https://help.duckduckgo.com/duckduckgo-help-pages/results/duckduckbot/
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "20.191.45.212",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "40.88.21.235",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "40.76.173.151",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "40.76.163.7",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "20.185.79.47",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "52.142.26.175",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "20.185.79.15",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "52.142.24.149",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "40.76.162.208",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "40.76.163.23",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "40.76.162.191",
+            "comment" => "DuckDuckGo",
+        ],
+        [
+            "url" => "/",
+            "rule" => "allow",
+            "ip" => "40.76.162.247",
+            "comment" => "DuckDuckGo",
+        ],
+        // -----------------------------------------------------------------------------
     ]
 ];

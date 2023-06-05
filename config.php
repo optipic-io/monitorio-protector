@@ -424,27 +424,28 @@ return [
     |
     */
 
+    // Default password: !w!4UcWdSW45*1ll$DaBs!
     'www_authenticate' => [
-        [
+        /*[
             'url'  => '/admin/',
             'user' => 'monitorio',
-            'pass' => '$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1',
+            'pass' => '$apr1$5z7ykuvx$acJycSbYy8ok/FeXABRbP.',
         ],
         [
             'url'  => '/bitrix/admin/',
             'user' => 'monitorio',
-            'pass' => '$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1',
+            'pass' => '$apr1$5z7ykuvx$acJycSbYy8ok/FeXABRbP.',
         ],
         [
             'url'  => '/wp-admin/',
             'user' => 'monitorio',
-            'pass' => '$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1',
+            'pass' => '$apr1$5z7ykuvx$acJycSbYy8ok/FeXABRbP.',
         ],
         [
             'url'  => '/administrator/',
             'user' => 'monitorio',
-            'pass' => '$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1',
-        ],
+            'pass' => '$apr1$5z7ykuvx$acJycSbYy8ok/FeXABRbP.',
+        ],*/
     ],
 
     /*

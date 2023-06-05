@@ -186,28 +186,7 @@
             "ip": "192.168.0.0/16"
         }
     ],
-    "www_authenticate": [
-        {
-            "url": "/admin/",
-            "user": "monitorio",
-            "pass": "$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1"
-        },
-        {
-            "url": "/bitrix/admin/",
-            "user": "monitorio",
-            "pass": "$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1"
-        },
-        {
-            "url": "/wp-admin/",
-            "user": "monitorio",
-            "pass": "$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1"
-        },
-        {
-            "url": "/administrator/",
-            "user": "monitorio",
-            "pass": "$apr1$a89mu63o$GsO9t51038qQlwV13nTZk1"
-        }
-    ],
+    "www_authenticate": [],
     "dialog_ui": {
         "background_image": "",
         "bg_color": "#ffffff",
