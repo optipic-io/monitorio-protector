@@ -201,7 +201,7 @@ return [
         // User-agent filter.
         'user_agent' => [
             'enable' => true,
-            'strict_mode' => false,
+            'strict_mode' => true,
         ],
 
         // RDNS filter.

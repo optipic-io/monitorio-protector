@@ -85,7 +85,7 @@
         },
         "user_agent": {
             "enable": true,
-            "strict_mode": false
+            "strict_mode": true
         },
         "rdns": {
             "enable": true,
