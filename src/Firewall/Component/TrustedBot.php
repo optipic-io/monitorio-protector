@@ -220,6 +220,12 @@ class TrustedBot extends ComponentProvider
                 'userAgent' => 'baiduspider',
                 'rdns'      => '.baidu.com',
             ],
+
+            // Search engine: Petal Search (Huawei search engine)
+            'petal' => [
+                'userAgent' => 'petalbot',
+                'rdns'      => '.petalsearch.com',
+            ],
             
         ];
 

@@ -453,7 +453,7 @@ class UserAgent extends ComponentProvider
             'Papa Foto',
             'Pavuk',
             'PeoplePal',
-            'Petalbot',
+            //'Petalbot',
             'Pi-Monster',
             'Picscout',
             'Picsearch',
