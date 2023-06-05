@@ -215,7 +215,7 @@ class TrustedBot extends ComponentProvider
                 'rdns'      => '.rambler.ru',
             ],
 
-            // Search engine: Rambler
+            // Search engine: Baidu
             'baidu' => [
                 'userAgent' => 'baiduspider',
                 'rdns'      => '.baidu.com',
